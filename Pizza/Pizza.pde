@@ -1,7 +1,11 @@
 
 
  void setup() {
-  size(1000,800);
+   size(1000,800);
+   PImage pizzaBox = loadImage("box.jpg");        
+pizzaBox.resize(1000, 800);        
+background(pizzaBox);                                        
+  
    fill(211,166,124);
  ellipse(500,400,500,500); 
   fill(#EA4752);
@@ -13,25 +17,15 @@
 void draw() {
  
     PImage pepperoni = loadImage("pepperoni.ppm.gif");        
-                image(pepperoni,500, 400);
-   image(pepperoni,520, 450);
+               
   PImage pizza = loadImage("pizza.ppm.gif");        
-                image(pizza,500, 480);
-   image(pizza,408, 500);
-   image(pepperoni,470, 500);
-  image(pizza,400, 300);
-  image(pepperoni,350, 300);
-  image(pepperoni,600, 500);
-   image(pizza,500, 300);
-  image(pepperoni,380, 400);
-  image(pepperoni,560, 300);
-  image(pizza,608, 462);
+   
   if (mousePressed && (mouseButton == RIGHT)){
+   image(pepperoni,mouseX,mouseY); 
   }
- if  (mousePressed){
+ if  (mousePressed && (mouseButton == LEFT)){
   image(pizza,mouseX,mouseY); 
   playSound();
-  
  } 
 }
 import ddf.minim.*;
