@@ -8,7 +8,7 @@ background(#FAFFFF);
 fill (#28E0E8);
 if  (mousePressed)
 x+=100;
-if (x>800)
+if (x>width)
 playSound(); 
 }
 
@@ -22,18 +22,3 @@ void playSound() {
     soundPlayed = true;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
